@@ -4,8 +4,15 @@ var Piece = Infinigon.Piece;
 
 function FreeForAll() {
 
+  var options = {
+    size: {
+      width: 3000,
+      height: 3000
+    }
+  }
   this.game = new Infinigon();
   this.game.start();
+  this.game.onCollision = this.handleCollision;
 
 }
 
@@ -17,8 +24,8 @@ FreeForAll.prototype.newPlayer = function(id) {
   var options = {
     board: this.game.board,
     position: {
-      x: 500,
-      y: 500
+      x: 1500,
+      y: 1500
     },
     class: 'human piece'
   };
@@ -27,6 +34,14 @@ FreeForAll.prototype.newPlayer = function(id) {
 
 FreeForAll.prototype.removePlayer = function(id) {
   this.game.board.pieces[id].deconstruct();
+};
+
+FreeForAll.prototype.handleCollision = function(pieceA, pieceB) {
+  if (pieceA.class.indexOf("human") > -1 && pieceB.class.indexOf("projectile") > -1) {
+    pieceA.deconstruct();
+  } else if (pieceA.class.indexOf("projectile") > -1 && pieceB.class.indexOf("human") > -1) {
+    pieceB.deconstruct();
+  }
 };
 
 module.exports = FreeForAll();

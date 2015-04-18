@@ -27,7 +27,10 @@ FreeForAll.prototype.newPlayer = function(id) {
       x: 1500,
       y: 1500
     },
-    class: 'human piece'
+    class: 'human piece',
+    weapon: {
+      cooldown: 350
+    }
   };
   return this.game.createPiece(options);
 };

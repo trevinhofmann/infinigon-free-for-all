@@ -45,4 +45,4 @@ FreeForAll.prototype.handleCollision = function(pieceA, pieceB) {
   }
 };
 
-module.exports = FreeForAll();
+module.exports = FreeForAll;

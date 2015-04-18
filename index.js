@@ -20,7 +20,7 @@ FreeForAll.prototype.getGame = function() {
   return this.game;
 };
 
-FreeForAll.prototype.newPlayer = function(id) {
+FreeForAll.prototype.newPlayer = function(id, deathCallback) {
   var options = {
     id: id,
     position: {
@@ -30,7 +30,8 @@ FreeForAll.prototype.newPlayer = function(id) {
     class: 'human piece',
     weapon: {
       cooldown: 350
-    }
+    },
+    deathCallback: deathCallback
   };
   return this.game.createPiece(options);
 };

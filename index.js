@@ -9,7 +9,7 @@ function FreeForAll() {
       width: 3000,
       height: 3000
     }
-  }
+  };
   this.game = new Infinigon();
   this.game.start();
   this.game.onCollision = this.handleCollision;

@@ -23,14 +23,13 @@ FreeForAll.prototype.getGame = function() {
 FreeForAll.prototype.newPlayer = function(id) {
   var options = {
     id: id,
-    board: this.game.board,
     position: {
       x: 1500,
       y: 1500
     },
     class: 'human piece'
   };
-  return new Piece(options);
+  return this.game.createPiece(options);
 };
 
 FreeForAll.prototype.removePlayer = function(id) {

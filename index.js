@@ -5,6 +5,7 @@ var Piece = Infinigon.Piece;
 function FreeForAll() {
 
   this.game = new Infinigon();
+  this.game.start();
 
 }
 

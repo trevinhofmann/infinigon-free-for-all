@@ -1,0 +1,9 @@
+{
+  "name": "infinigon-free-for-all",
+  "version": "0.0.0",
+  "description": "A module which creates an Infinigon game in free-for-all mode.",
+  "private": true,
+  "dependencies": {
+    "infinigon": "*"
+  }
+}

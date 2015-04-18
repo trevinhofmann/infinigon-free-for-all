@@ -1,6 +1,6 @@
 {
   "name": "infinigon-free-for-all",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A module which creates an Infinigon game in free-for-all mode.",
   "dependencies": {
     "infinigon": "*"

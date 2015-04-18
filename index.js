@@ -33,7 +33,7 @@ FreeForAll.prototype.newPlayer = function(id) {
 };
 
 FreeForAll.prototype.removePlayer = function(id) {
-  this.game.board.pieces[id].deconstruct();
+  this.game.removePiece(id);
 };
 
 FreeForAll.prototype.handleCollision = function(pieceA, pieceB) {

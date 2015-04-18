@@ -22,6 +22,7 @@ FreeForAll.prototype.getGame = function() {
 
 FreeForAll.prototype.newPlayer = function(id) {
   var options = {
+    id: id,
     board: this.game.board,
     position: {
       x: 1500,
@@ -29,7 +30,7 @@ FreeForAll.prototype.newPlayer = function(id) {
     },
     class: 'human piece'
   };
-  return new Piece(id, options);
+  return new Piece(options);
 };
 
 FreeForAll.prototype.removePlayer = function(id) {
